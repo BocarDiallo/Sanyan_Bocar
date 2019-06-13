@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{999C4B7F-7219-4A71-9325-867BEE9BC680}</ProjectGuid>
+    <RootNamespace>TP4</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\CodeDepart\AbstractBox.h" />
+    <ClInclude Include="..\..\CodeDepart\AbstractCommand.h" />
+    <ClInclude Include="..\..\CodeDepart\AbstractNode.h" />
+    <ClInclude Include="..\..\CodeDepart\AbstractObserver.h" />
+    <ClInclude Include="..\..\CodeDepart\AbstractRobot.h" />
+    <ClInclude Include="..\..\CodeDepart\AbstractVisitor.h" />
+    <ClInclude Include="..\..\CodeDepart\BoundingBox.h" />
+    <ClInclude Include="..\..\CodeDepart\Chair.h" />
+    <ClInclude Include="..\..\CodeDepart\CommandManager.h" />
+    <ClInclude Include="..\..\CodeDepart\CompositeNode.h" />
+    <ClInclude Include="..\..\CodeDepart\EllipseBox.h" />
+    <ClInclude Include="..\..\CodeDepart\House.h" />
+    <ClInclude Include="..\..\CodeDepart\Motor.h" />
+    <ClInclude Include="..\..\CodeDepart\Observable.h" />
+    <ClInclude Include="..\..\CodeDepart\Obstacle.h" />
+    <ClInclude Include="..\..\CodeDepart\ObstacleDetectionCommand.h" />
+    <ClInclude Include="..\..\CodeDepart\ObstaclesDetectionVisitor.h" />
+    <ClInclude Include="..\..\CodeDepart\Robot.h" />
+    <ClInclude Include="..\..\CodeDepart\RobotProxy.h" />
+    <ClInclude Include="..\..\CodeDepart\Room.h" />
+    <ClInclude Include="..\..\CodeDepart\RoundBox.h" />
+    <ClInclude Include="..\..\CodeDepart\Sensor.h" />
+    <ClInclude Include="..\..\CodeDepart\Sofa.h" />
+    <ClInclude Include="..\..\CodeDepart\Table.h" />
+    <ClInclude Include="..\..\CodeDepart\Tablet.h" />
+    <ClInclude Include="..\..\CodeDepart\Test_TP4.h" />
+    <ClInclude Include="..\..\CodeDepart\TotalSurfaceCalculatorCommand.h" />
+    <ClInclude Include="..\..\CodeDepart\TotalSurfaceToCleanVisitor.h" />
+    <ClInclude Include="..\..\CodeDepart\Vacuum.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\CodeDepart\Chair.cpp" />
+    <ClCompile Include="..\..\CodeDepart\CommandManager.cpp" />
+    <ClCompile Include="..\..\CodeDepart\CompositeNode.cpp" />
+    <ClCompile Include="..\..\CodeDepart\House.cpp" />
+    <ClCompile Include="..\..\CodeDepart\Main.cpp" />
+    <ClCompile Include="..\..\CodeDepart\Motor.cpp" />
+    <ClCompile Include="..\..\CodeDepart\Observable.cpp" />
+    <ClCompile Include="..\..\CodeDepart\Obstacle.cpp" />
+    <ClCompile Include="..\..\CodeDepart\ObstacleDetectionCommand.cpp" />
+    <ClCompile Include="..\..\CodeDepart\ObstaclesDetectionVisitorcpp.cpp" />
+    <ClCompile Include="..\..\CodeDepart\Robot.cpp" />
+    <ClCompile Include="..\..\CodeDepart\RobotProxy.cpp" />
+    <ClCompile Include="..\..\CodeDepart\Room.cpp" />
+    <ClCompile Include="..\..\CodeDepart\Sensor.cpp" />
+    <ClCompile Include="..\..\CodeDepart\Sofa.cpp" />
+    <ClCompile Include="..\..\CodeDepart\Table.cpp" />
+    <ClCompile Include="..\..\CodeDepart\Tablet.cpp" />
+    <ClCompile Include="..\..\CodeDepart\Test_TP4.cpp" />
+    <ClCompile Include="..\..\CodeDepart\TotalSurfaceCalculatorCommand.cpp" />
+    <ClCompile Include="..\..\CodeDepart\TotalSurfaceToCleanVisitor.cpp" />
+    <ClCompile Include="..\..\CodeDepart\Vacuum.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
