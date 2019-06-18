@@ -12,4 +12,5 @@ public:
 	virtual void setPower(double power) = 0;
 	virtual void setBrosseTapis(bool BT) = 0;
 	virtual void setDetection(bool DT) = 0;
+
 };

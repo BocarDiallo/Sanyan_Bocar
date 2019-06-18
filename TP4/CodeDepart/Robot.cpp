@@ -16,7 +16,6 @@ void Robot::setDirection(std::string direction)
 {
 	direction_ = direction;
 }
-
 std::string Robot::getDirection()
 {
 	return direction_;

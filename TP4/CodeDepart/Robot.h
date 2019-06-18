@@ -21,7 +21,6 @@ public:
 	void setRobotState(bool robotState);
 
 private:
-
 	bool m_robotReady = true;
 	std::string direction_ = "";
 	double speed_ = 0.0;

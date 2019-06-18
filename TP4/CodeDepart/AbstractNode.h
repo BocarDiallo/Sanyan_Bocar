@@ -16,8 +16,6 @@ protected:
 
 public:
 
-	virtual ~AbstractNode() {}   // Desctructeur virtuel pour la classe abstraite.
-
 	AbstractNode() : m_parent(nullptr), m_id(0) {};
 	AbstractNode(AbstractNode* parent, int id) : m_parent(parent), m_id(id) {};
 

@@ -15,6 +15,8 @@ public:
 
 	void deleteObservateur(AbstractObserver* observateur);
 
+	int getObservateur();
+	
 
 private:
 

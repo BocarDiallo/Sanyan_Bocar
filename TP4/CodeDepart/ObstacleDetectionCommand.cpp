@@ -10,7 +10,15 @@ ObstacleDetectionCommand::ObstacleDetectionCommand(AbstractNode* root) : Abstrac
 ObstacleDetectionCommand::~ObstacleDetectionCommand() {}
 
 void ObstacleDetectionCommand::execute() {
-	int nbObstacles = 0;
-	// A COMPLETER
-	std::cout << "Obstacles Command: " << nbObstacles << std::endl << std::endl;
+	// Créer un visiteur de détection d'obstacles et visiter le noeud racine
+	ObstaclesDetectionVisitor* visitor = new ObstaclesDetectionVisitor();
+	m_root->acceptVisitor(visitor);
+	// Récupérer le nombre d'obstacle calculé par le visiteur
+	obstacleDetected = visitor->getObstaclesCounter();
+	// Retirer la mémoire allouée pour le visiteur
+	delete visitor;
+}
+int ObstacleDetectionCommand::getNbreObstacleDetected()
+{
+	return obstacleDetected;
 }

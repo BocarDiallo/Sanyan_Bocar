@@ -2,9 +2,6 @@
 
 #include "AbstractNode.h"
 #include <map>
-#include <utility> // For make_pair
-
-using namespace std;
 
 class CompositeNode :public AbstractNode {
 
@@ -26,10 +23,8 @@ public:
 	AbstractNode* getChild(int id);
 	bool findChild(int id);
 
-	//AbstractNode* removeChild(AbstractNode* node);
-	// AbstractNode* removeChild(int id);
-	void removeChild(AbstractNode* node);
-	void removeChild(int id);
+	AbstractNode* removeChild(AbstractNode* node);
+	AbstractNode* removeChild(int id);
 
 	void clearChildren();
 
@@ -40,4 +35,5 @@ public:
 	virtual void setBox(AbstractBox* box);
 	virtual AbstractBox* getBox();
 	virtual void toStream(std::ostream& s);
+
 };

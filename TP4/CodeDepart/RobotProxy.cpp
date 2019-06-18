@@ -7,9 +7,10 @@ RobotProxy::~RobotProxy()
 	OPptr = nullptr;
 }
 
-RobotProxy::RobotProxy(Robot* Operation) : OPptr(Operation)
+RobotProxy::RobotProxy(Robot* Operation)
 {
 	// A COMPLETER
+	OPptr = Operation;
 }
 
 
@@ -44,6 +45,6 @@ void RobotProxy::setPower(double power)
 void RobotProxy::setSpeed(double speed)
 {
 	// A COMPLETER
-	if  (OPptr->getRobotState() == true)
+	if (OPptr->getRobotState() == true)
 		OPptr->setSpeed(speed);
 }

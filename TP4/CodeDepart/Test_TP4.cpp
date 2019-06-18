@@ -43,7 +43,7 @@ void Test_TP4::executeProxyTest()
 	Robot* robot_ = new Robot();
 	RobotProxy* robotProxy = new  RobotProxy(robot_);
 
-	std::cout << "Test #1 - Changement de la direction du robot  "; // << std::endl << std::endl;
+	std::cout << "Test #1 - Changement de la direction du robot" << std::endl << std::endl;
 	try
 	{
 		robotProxy->setDirection("Nord");
@@ -61,7 +61,7 @@ void Test_TP4::executeProxyTest()
 	}
 
 
-	std::cout << "Test #2 - Activation de la brosse a tapis  "; // << std::endl << std::endl;
+	std::cout << "Test #2 - Activation de la brosse a tapis" << std::endl << std::endl;
 	try
 	{
 		robotProxy->setBrosseTapis(true);
@@ -77,7 +77,7 @@ void Test_TP4::executeProxyTest()
 	}
 
 
-	std::cout << "Test #3 - Changement de la vitesse du robot  "; // << std::endl << std::endl;
+	std::cout << "Test #3 - Changement de la vitesse du robot" << std::endl << std::endl;
 
 	try
 	{
@@ -94,7 +94,7 @@ void Test_TP4::executeProxyTest()
 		std::cout << e.what() << std::endl;
 	}
 
-	std::cout << "Test #4 - Changement de la puissance du robot  ";  // << std::endl << std::endl;
+	std::cout << "Test #4 - Changement de la puissance du robot" << std::endl << std::endl;
 
 	try
 	{
@@ -112,7 +112,7 @@ void Test_TP4::executeProxyTest()
 	}
 
 
-	std::cout << "Test #5 - Changement de la puissance du robot  "; // << std::endl << std::endl;
+	std::cout << "Test #5 - Changement de la puissance du robot" << std::endl << std::endl;
 
 	try
 	{
@@ -137,8 +137,9 @@ void Test_TP4::executeProxyTest()
 
 void Test_TP4::executeCompositeTest()
 {
-	std::cout << std::endl << std::endl << "------------------------- COMPOSITE -------------------------------";
-	std::cout << std::endl << std::endl;
+	std::cout << std::endl << std::endl << "------------------------- COMPOSITE -------------------------------" << std::endl << std::endl;
+	std::cout << std::endl;
+
 
 	House* House1 = new House(nullptr, 0);
 	Room* room1 = new Room(House1, 1, 100, 100);
@@ -148,10 +149,10 @@ void Test_TP4::executeCompositeTest()
 	Sofa* sofa1 = new Sofa(room1, 4, 4, 5);
 	Table* table1 = new Table(room1, 5, 2);
 
-	std::cout << "Test #1 - Insertion et retrait des enfants :  " << std::endl;
+	std::cout << "Test #1 - Insertion et retrait des enfants" << std::endl << std::endl;
 
 
-	std::cout << "1.1 - Insertion  ";  // << std::endl << std::endl;
+	std::cout << "1.1 - Insertion" << std::endl << std::endl;
 
 	try{
 
@@ -176,8 +177,7 @@ void Test_TP4::executeCompositeTest()
 		std::cout << e.what() << std::endl;
 	}
 
-
-	std::cout << "1.2 - Supression  ";  // << std::endl << std::endl;
+	std::cout << "1.2 - Supression" << std::endl << std::endl;
 
 	try{
 		room1->removeChild(chair1);
@@ -198,7 +198,7 @@ void Test_TP4::executeCompositeTest()
 		std::cout << e.what() << std::endl;
 	}
 
-	std::cout << "\nTest #2 - Recuperation des enfants  "; // << std::endl << std::endl;
+	std::cout << "Test #2 - Recuperation des enfants" << std::endl << std::endl;
 
 	try{
 		AbstractNode*temp = room1->getChild(5);
@@ -239,7 +239,7 @@ void Test_TP4::executeVisiteurTest()
 
 	std::cout << std::endl << std::endl << "------------------------- VISITEUR -------------------------------" << std::endl << std::endl;
 
-	std::cout << "Test #1 - Creation des visiteurs  "; // << std::endl << std::endl;
+	std::cout << "Test #1 - Creation des visiteurs" << std::endl << std::endl;
 
 	try{
 
@@ -252,7 +252,7 @@ void Test_TP4::executeVisiteurTest()
 
 		printSuccess();
 
-		std::cout << "Test #1.1 Visiteur obstacles  "; // << std::endl << std::endl;
+		std::cout << "Test #1.1 Visiteur obstacles" << std::endl << std::endl;
 
 		if (visitor->getObstaclesCounter() == 4)
 		{
@@ -263,7 +263,7 @@ void Test_TP4::executeVisiteurTest()
 			printFailure();
 		}
 
-		std::cout << "Test #1.2 Visiteur Surface  "; //<< std::endl << std::endl;
+		std::cout << "Test #1.2 Visiteur Surface" << std::endl << std::endl;
 
 		if ((int)totalSurfaceVisitor->getTotalSurface() == 9724)
 		{
@@ -330,7 +330,7 @@ void Test_TP4::executeObservatorTest()
 
 	std::cout << std::endl << std::endl << "------------------------- OBSERVATEUR -------------------------------" << std::endl << std::endl;
 
-	std::cout << "Test #5.1 Observateur Motor  ";  // << std::endl << std::endl;
+	std::cout << "Test #5.1 Observateur Motor" << std::endl << std::endl;
 	moteur->setTemperature(25);
 	moteur->run();
 	if (tablette->get_nbAvertissements() == 1)
@@ -338,7 +338,7 @@ void Test_TP4::executeObservatorTest()
 	else
 		printFailure();
 
-	std::cout << "Test #5.2 Observateur Sensor  ";  // << std::endl << std::endl;
+	std::cout << "Test #5.2 Observateur Sensor" << std::endl << std::endl;
 	sensor->setSensor(true);
 	sensor->run();
 	if (tablette->get_nbAvertissements() == 2)
@@ -346,7 +346,7 @@ void Test_TP4::executeObservatorTest()
 	else
 		printFailure();
 
-	std::cout << "Test #5.3 Observateur Vacuum  ";  // << std::endl << std::endl;
+	std::cout << "Test #5.3 Observateur Vacuum" << std::endl << std::endl;
 	vacuum->setPowerV(1200.0);
 	vacuum->run();
 	if (tablette->get_nbAvertissements() == 3)

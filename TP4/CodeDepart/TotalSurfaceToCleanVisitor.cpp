@@ -22,15 +22,27 @@ void TotalSurfaceToCleanVisitor::visitAbstractNode(AbstractNode* node){
 }
 void TotalSurfaceToCleanVisitor::visitCompositeNode(CompositeNode* node){
 	// A COMPLETER
+	std::map<int, AbstractNode*>::iterator it = node->getMapBeginIterator();
+	std::map<int, AbstractNode*>::iterator endIt = node->getMapEndIterator();
+
+	while (it != endIt)
+	{
+		(*it).second->acceptVisitor(this);
+		it++;
+	}
 }
 
 void TotalSurfaceToCleanVisitor::visitRoomNode(Room* node){
 	// A COMPLETER
+	AbstractBox* box = node->getBox();
+	m_TotalSurface += box->getLength() * box->getWidth();
 
+	visitCompositeNode(node);
 }
 
 void TotalSurfaceToCleanVisitor::visitHouseNode(House* node){
 	// A COMPLETER
+	visitCompositeNode(node);
 }
 
 void TotalSurfaceToCleanVisitor::visitObstacleNode(Obstacle* node){
@@ -39,14 +51,20 @@ void TotalSurfaceToCleanVisitor::visitObstacleNode(Obstacle* node){
 
 void TotalSurfaceToCleanVisitor::visitChairNode(Chair* node){
 	// A COMPLETER
+	AbstractBox* box = node->getBox();
+	m_TotalSurface -= box->getLength() * box->getWidth();
 }
 
 void TotalSurfaceToCleanVisitor::visitSofaNode(Sofa* node){
 	// A COMPLETER
+	AbstractBox* box = node->getBox();
+	m_TotalSurface -= box->getBigRadius() * box->getSmallRadius() * M_PI;
 }
 
 
 void TotalSurfaceToCleanVisitor::visitTableNode(Table* node){
 	// A COMPLETER
+	AbstractBox* box = node->getBox();
+	m_TotalSurface -= M_PI * box->getRadius() * box->getRadius();
 }
 
